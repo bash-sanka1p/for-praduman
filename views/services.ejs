@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Services">
+    <meta name="author" content="someone">
+
+    <title>Services </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Mukta" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../stylesheets/services.css">
+    <link rel="stylesheet" href="css/styleblog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js"></script>
+
+</head>
+
+<div class="hero">
+    <nav>
+      <div class="hh">
+        <div class="logo"><img src="../images/Logo.jpg" alt="logo"></div>
+        <div class="hambargar">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services" style="background-color: #97dcc4;">Services</a></li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/">Contact Us</a></li>
+        <i class="fa-solid fa-user profileIcon"></i>
+      </ul>
+      <div class="sub-menu-wrap" id="profileMenu">
+       <% if (req.isAuthenticated()){%>
+        <div class="sub-menu">
+          <div class="user-info">
+           <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+            <h3><%=user.name %></h3>        
+            </div>
+          <hr>
+          <div class="menu-link">
+            <a href="#"><i class="fa-solid fa-user"></i>
+              <h4> Edit Profile <span>&gt;</span></h4>
+            </a>
+            <a href="/logout"><i class="fa-solid fa-right-from-bracket"></i>
+              <h4> LogOut <span>&gt;</span></h4>
+            </a>
+          </div>
+        </div>
+      <%}else {%>
+        <div class="sub-menu">
+          <div class="user-info">
+           <img  src="https://www.happierhuman.com/wp-content/uploads/2019/07/joking-man.jpg?ezimgfmt=rs:400x426/rscb1" alt="">
+            <h3>Wellcome Guest</h3>      
+          </div>
+          <hr>
+          <div class="menu-link">
+            <a href="/login"><i class="fa-solid fa-right-to-bracket"></i>
+              <h4> LogIn <span>&gt;</span></h4>
+            </a>
+            <a href="/login"><i class="fa-solid fa-right-from-bracket"></i>
+              <h4> SignUp <span>&gt;</span></h4>
+            </a>
+          </div>
+        </div>
+        <% }%>
+      </div>
+    </nav>
+  </div>
+
+<section class="bg-section" id="service">
+		<div class="section-h1">
+			<h1>Services</h1>
+			<hr class="hr-h1">
+		</div>
+        <div class="container-fluid">
+        	<div class="row slideanim slide"> 
+	        <div class="tabpanel" role="tabpanel">
+	            <div class="col-md-3 col-sm-3">
+	                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
+	                    <li role="presentation" class="brand-nav active"><a href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab" aria-expanded="true">PATENT</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab" aria-expanded="false">TRADEMARK</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab" aria-expanded="false">COPYRIGHT</a></li>
+	                    <li role="presentation" class="brand-nav "><a href="#tab4" aria-controls="tab4" role="tab" data-toggle="tab" aria-expanded="false">DESIGN</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-9 col-sm-9">
+	                <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft active" id="tab1">
+	                    	<h3 class="laws">PATENT</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+	                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab2">
+	                    	<h3 class="laws">TRADEMARK</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+	                          .
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+                            </p>
+	                </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab3">
+	                    	<h3 class="laws">COPYRIGHT</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft " id="tab4">
+	                    	<h3 class="laws">DESIGN</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>    
+		
+	</section>
+
+    <section class="bg-section" id="service">
+	
+        <div class="container-fluid">
+        	<div class="row slideanim slide"> 
+	        <div class="tabpanel" role="tabpanel">
+	            <div class="col-md-3 col-sm-3">
+	                <ul class="nav nav-pills brand-pills nav-stacked" role="tablist">
+	                    <li role="presentation" class="brand-nav active"><a href="#tab5" aria-controls="tab5" role="tab" data-toggle="tab" aria-expanded="true">LTITGATION</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab6" aria-controls="tab6" role="tab" data-toggle="tab" aria-expanded="false">GEO-INDECATION</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab7" aria-controls="tab7" role="tab" data-toggle="tab" aria-expanded="false">PLANT VARIETIES</a></li>
+	                    <li role="presentation" class="brand-nav"><a href="#tab8" aria-controls="tab8" role="tab" data-toggle="tab" aria-expanded="false">CORPORATE LAW</a></li>
+	                </ul>
+	            </div>
+	            <div class="col-md-9 col-sm-9">
+	                <div class="tab-content">
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab6">
+	                    	<h3 class="laws">GEO-INDECATION</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+                            </p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab7">
+	                    	<h3 class="laws">PLANT VARIETIES</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+                                . 
+	                        </p>
+	                        <p>
+	                            ELorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                    </div>
+	                    
+	                        
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft" id="tab8">
+	                    	<h3 class="laws">CORPORATE LAW</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+ 
+	                        </p>
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                    </div>
+	                    <div role="tabpanel" class="tab-pane slideanimleft slideleft active" id="tab5">
+	                    	<h3 class="laws">LTITGATION</h3>
+	                    	<hr class="laws-hr">
+	                        <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+                                . 
+	                        </p>
+	                        <p>
+	                            ELorem ipsum dolor sit amet consectetur adipisicing elit. Natus quidem ratione veniam odio aut atque reiciendis fugiat iure nulla necessitatibus velit numquam, quaerat, architecto praesentium, inventore enim fuga aliquam. Dolore obcaecati aperiam magni voluptatem est debitis doloribus distinctio et veritatis! 
+
+	                        </p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        </div>
+	    </div>    
+		
+	</section>
+
+
+<script src="js/script.js"></script>
+
+
+<script>
+    angular.module('formApp', [])
+        .controller('formController', ['$scope', function($scope) {
+          	$scope.master = {};
+
+          	$scope.update = function(user) {
+            	$scope.master = angular.copy(user);
+          	};
+
+          	$scope.reset = function() {
+            	$scope.user = angular.copy($scope.master);
+          	};
+
+          	$scope.reset();
+    }]);
+
+    const menu = document.getElementById("profileMenu");
+    const menuBtn =  document.querySelector(".profileIcon");
+
+    menuBtn.addEventListener("click",function(){
+        menu.classList.toggle("show");
+        setTimeout(() => {
+            menu.style.overflow = "visible";
+        }, 300);
+        menu.style.overflow = "hidden";
+    })
+    
+    document.addEventListener("click",function(e){
+        if(e.target !== menuBtn && !menu.contains(e.target)){
+            menu.classList.remove("show");
+        }
+    })
+    // profile panel
+
+    // hambargar
+    const hmb = document.querySelector(".hambargar");
+    const navul = document.querySelector(".hero nav ul");
+
+    var x = window.matchMedia("(max-width: 700px)");
+
+    x.addEventListener("change", function() {
+        navul.classList.remove("show");
+        menu.classList.remove("show");
+        hmb.classList.remove("active");
+    });
+    hmb.addEventListener("click",function(){
+        navul.classList.toggle("show");
+        hmb.classList.toggle("active");
+    })
+
+    document.addEventListener("click",function(e){
+        if(e.target !== hmb && !navul.contains(e.target)){
+            navul.classList.remove("show");
+            hmb.classList.remove("active");
+        }
+    })
+</script> 
+
+</body>
+</html>	
+
